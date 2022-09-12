@@ -8,7 +8,7 @@ public class Person{
         height = h;
         age = how_old;
         name = n;
-        hC = hairColor;
+        hairColor = hC;
     }
 
 }

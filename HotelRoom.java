@@ -6,41 +6,57 @@ public class HotelRoom{ // Defining a PUBLIC HotelRoom class
     
     HotelRoom(int number){
         roomNumber = number; // Defining the hotel room number 
+        guestOne = null;
+        guestTwo = null;
+        number_guest = 0;
 
     }
 
-    void checkIn(Person guest){
+    HotelRoom(){
+        roomNumber = 123;
+        guestOne = null;
+        guestTwo = null;
+        number_guest = 0;
+    }
 
-        while (number_guest <=2 ){
+    void checkIn(Person guest){
+            if (number_guest > 1){
+                System.out.println("Max capacity reached.");
+                return ;
+            }
+
             if (guestOne == null){
                 guestOne = guest;
+                guestTwo = null;
                 number_guest = 1;
             }
             
-            if (guestOne!= null){
+            else if (guestOne!= null){
                 guestTwo = guest;
                 number_guest = 2;
                 }
             
-            if (guestOne != null && guestTwo != null && number_guest == 2){
+            else if (guestOne != null && guestTwo != null && number_guest == 2){
                 System.out.println("Maximum capacity reached.");
-                number_guest++;
             }   
-        }
-            
-
         }
 
     void checkOut(Person guest){
+        if (guestTwo == null && guestOne == null){
+            System.out.println("No one to check out.");
+        } 
+
         if (guestOne == guest){
             guestOne = null;
-            number_guest = 0;
+            number_guest--;
         }
-        else{
+            
+        if (guestTwo == guest){
             guestTwo = null;
-            number_guest = 1;
-            }
+            number_guest--;
         }
+        
+    }
 
     int checkCapacity(){
         if(guestOne != null && guestTwo != null){
