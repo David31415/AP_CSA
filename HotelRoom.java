@@ -6,6 +6,8 @@ public class HotelRoom{ // Defining a PUBLIC HotelRoom class
     
     HotelRoom(int number){
         roomNumber = number; // Defining the hotel room number 
+        guestOne = null;
+        guestTwo = null;
 
     }
 
