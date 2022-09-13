@@ -4,8 +4,8 @@ class Main{
         Person Carlos = new Person(190.0, 19,"Carlos","White");
         Person Robert = new Person(160.0, 12,"Robert","Dark");
         HotelRoom House = new HotelRoom(1);
-        House.checkin(Bob);
-        House.checkin(Carlos);
+        House.checkIn(Bob);
+        House.checkIn(Carlos);
         House.checkCapacity();
     }
 }
