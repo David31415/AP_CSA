@@ -12,24 +12,18 @@ public class HotelRoom{ // Defining a PUBLIC HotelRoom class
 
     }
 
-<<<<<<< HEAD
     HotelRoom(){ // Empty hotel room (default)
         roomNumber = 123; // Everything in this constructor is default.
-=======
-    HotelRoom(){
-        roomNumber = 123;
->>>>>>> 71071ca57ab07e786544e4fb36afa013de59f687
         guestOne = null;
         guestTwo = null;
         number_guest = 0;
     }
 
 
-<<<<<<< HEAD
     void checkIn(Person guest){ // Check in function won't return anything.
             if (number_guest > 1){ // if statements. There is no while loop 
                 System.out.println("Max capacity reached."); // Initial if statement checks if there are 2 guests inside the hotel room. 
-                return ; //
+                return ; 
             }
 
             if (guestOne == null){ // If room is empty, we set the first slot to be the guest, 
@@ -55,46 +49,11 @@ public class HotelRoom{ // Defining a PUBLIC HotelRoom class
         } 
 
         if (guestOne == guest){ // If the first guest slot is the person you want to check out, then check out the first guest and subtract one from the total guest count.
-=======
-    void checkIn(Person guest){
-            if (number_guest > 1){
-                System.out.println("Max capacity reached.");
-                return ;
-            }
-
-            if (guestOne == null){
-                guestOne = guest;
-                guestTwo = null;
-                number_guest = 1;
-            }
-            
-            else if (guestOne!= null){
-                guestTwo = guest;
-                number_guest = 2;
-                }
-            
-            else if (guestOne != null && guestTwo != null && number_guest == 2){
-                System.out.println("Maximum capacity reached.");
-            }   
-        }
-
-    void checkOut(Person guest){
-
-        if (guestTwo == null && guestOne == null){
-            System.out.println("No one to check out.");
-        } 
-
-        if (guestOne == guest){
->>>>>>> 71071ca57ab07e786544e4fb36afa013de59f687
             guestOne = null;
             number_guest--;
         }
             
-<<<<<<< HEAD
         if (guestTwo == guest){ // If the second person is the guest, then switch that placeholder to null. Decrease the total guest count by 1. 
-=======
-        if (guestTwo == guest){
->>>>>>> 71071ca57ab07e786544e4fb36afa013de59f687
             guestTwo = null;
             number_guest--;
         }
